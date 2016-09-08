@@ -30,15 +30,19 @@ namespace ConsoleApplication
         /// Функция вывода результата
         public static void PrintResult<T>(
             IEnumerable<T> pareto,
-            IEnumerable<T> slaterResult)
+            IEnumerable<T> slater)
         {
             Console.WriteLine("--PARETO--");
-            pareto.ToList()
-                .ForEach(x => Console.WriteLine(x));
+            foreach (var x in pareto)
+            {
+                Console.WriteLine(x);
+            }
 
             Console.WriteLine("--SLATER--");
-            slaterResult.ToList()
-                .ForEach(x => Console.WriteLine(x));
+            foreach (var x in slater)
+            {
+                Console.WriteLine(x);
+            }
         }
 
         // Получить массив двухцифровых чисел по варианту
