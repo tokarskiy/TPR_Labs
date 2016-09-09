@@ -8,9 +8,7 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            var decisionList = 
-                from x in GetTask(2)
-                select (Decision)x;
+            var decisionList = GetTask(Convert.ToInt32(args[0]));
 
             // Поиск решения, оптимального за Парето
             var paretoResult = 
@@ -35,24 +33,26 @@ namespace ConsoleApplication
             Console.WriteLine("--PARETO--");
             foreach (var x in pareto)
             {
-                Console.WriteLine(x);
+                Console.Write($"{x} ");
             }
+            Console.WriteLine();
 
             Console.WriteLine("--SLATER--");
             foreach (var x in slater)
             {
-                Console.WriteLine(x);
+                Console.Write($"{x} ");
             }
+            Console.WriteLine();
         }
 
         // Получить массив двухцифровых чисел по варианту
-        public static Int32[] GetTask(Int32 variant)
+        public static Decision[] GetTask(Int32 variant)
         {
-            return (new Int32[][] 
+            return (new Decision[][] 
             {
-                new Int32[] { 05, 04, 33, 99, 34, 19, 15, 35, 87, 53, 69, 50, 87, 02, 37, 62, 89, 10, 05, 60 },
-                new Int32[] { 04, 11, 57, 29, 03, 16, 92, 21, 22, 05, 43, 79, 61, 28, 78, 47, 51, 45, 82, 87 },
-                new Int32[] { 99, 51, 89, 86, 53, 26, 48, 94, 36, 06, 07, 92, 17, 64, 21, 20, 80, 66, 94, 54 }
+                new Decision[] { 05, 04, 33, 99, 34, 19, 15, 35, 87, 53, 69, 50, 87, 02, 37, 62, 89, 10, 05, 60 },
+                new Decision[] { 04, 11, 57, 29, 03, 16, 92, 21, 22, 05, 43, 79, 61, 28, 78, 47, 51, 45, 82, 87 },
+                new Decision[] { 99, 51, 89, 86, 53, 26, 48, 94, 36, 06, 07, 92, 17, 64, 21, 20, 80, 66, 94, 54 }
             })[variant];
         }
     }
@@ -75,6 +75,11 @@ namespace ConsoleApplication
         public static implicit operator Decision(Int32 num)
         {
             return new Decision(num);
+        }
+
+        public static explicit operator Int32(Decision des)
+        {
+            return des.alternative1 * 10 + des.alternative2;
         }
 
         // Перегрузка операторов сравнения >, >=, <, <=
