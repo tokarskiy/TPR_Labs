@@ -40,7 +40,7 @@ namespace ConsoleApplication
             Console.WriteLine("--SLATER--");
             foreach (var x in slater)
             {
-                Console.Write($"{x} ");
+                Console.Write("{0} ", x);
             }
             Console.WriteLine();
         }
