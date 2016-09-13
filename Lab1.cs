@@ -33,7 +33,7 @@ namespace ConsoleApplication
             Console.WriteLine("--PARETO--");
             foreach (var x in pareto)
             {
-                Console.Write($"{x} ");
+                Console.Write("{0} ", x);
             }
             Console.WriteLine();
 
