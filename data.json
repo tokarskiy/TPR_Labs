@@ -1,0 +1,177 @@
+{
+  "clothings": [
+    {
+      "name": "Блайзер",
+      "weight": 0.5,
+      "price": 6
+    },
+    {
+      "name": "Бушлат",
+      "weight": 4.0,
+      "price": 48
+    },
+    {
+      "name": "Ватні штани",
+      "weight": 2,
+      "price": 24
+    },
+    {
+      "name": "В'єтнамки",
+      "weight": 0.5,
+      "price": 6
+    },
+    {
+      "name": "Джинси",
+      "weight": 1,
+      "price": 12
+    },
+    {
+      "name": "Кепка",
+      "weight": 0.5,
+      "price": 6
+    },
+    {
+      "name": "Кросівки",
+      "weight": 1,
+      "price": 12
+    },
+    {
+      "name": "Куртка",
+      "weight": 2,
+      "price": 24
+    },
+    {
+      "name": "Пальто",
+      "weight": 3,
+      "price": 36
+    },
+    {
+      "name": "Рукавички",
+      "weight": 0.5,
+      "price": 6
+    },
+    {
+      "name": "Светр",
+      "weight": 1,
+      "price": 12
+    },
+    {
+      "name": "Сорочка",
+      "weight": 0.5,
+      "price": 6
+    },
+    {
+      "name": "Футболка",
+      "weight": 0.5,
+      "price": 6
+    },
+    {
+      "name": "Черевики",
+      "weight": 1.5,
+      "price": 18
+    },
+    {
+      "name": "Чоботи",
+      "weight": 2,
+      "price": 24
+    },
+    {
+      "name": "Шапка",
+      "weight": 1,
+      "price": 12
+    },
+    {
+      "name": "Шорти",
+      "weight": 0.5,
+      "price": 6
+    }
+  ],
+
+  "suits": [
+    {
+      "minTemperature": -30,
+      "maxTemperature": -10,
+      "clothes": [
+        "Шапка",
+        "Бушлат",
+        "Рукавички",
+        "Ватні штани",
+        "Чоботи"
+      ]
+    },
+    {
+      "minTemperature": -9,
+      "maxTemperature": 0,
+      "clothes": [
+        "Шапка",
+        "Пальто",
+        "Рукавички",
+        "Джинси",
+        "Чоботи"
+      ]
+    },
+    {
+      "minTemperature": 1,
+      "maxTemperature": 10,
+      "clothes": [
+        "Кепка",
+        "Куртка",
+        "Джинси",
+        "Черевики"
+      ]
+    },
+    {
+      "minTemperature": 11,
+      "maxTemperature": 20,
+      "clothes": [
+        "Светр",
+        "Джинси",
+        "Кросівки"
+      ]
+    },
+    {
+      "minTemperature": 11,
+      "maxTemperature": 20,
+      "clothes": [
+        "Светр",
+        "Джинси",
+        "Кросівки"
+      ]
+    },
+    {
+      "minTemperature": 21,
+      "maxTemperature": 30,
+      "clothes": [
+        "Блайзер",
+        "Сорочка",
+        "Джинси",
+        "Кросівки"
+      ]
+    },
+    {
+      "minTemperature": 31,
+      "maxTemperature": 40,
+      "clothes": [
+        "Блайзер",
+        "Футболка",
+        "Шорти",
+        "В'єтнамки"
+      ]
+    }
+  ],
+
+  "temperatures": [
+	-11,
+	-7,
+	1,
+	1,
+	17,
+	22,
+	25,
+	24,
+	18,
+	10,
+	1,
+	-7
+  ]
+}
